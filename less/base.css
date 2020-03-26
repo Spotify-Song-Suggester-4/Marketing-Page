@@ -2,7 +2,8 @@
   margin: auto;
 }
 body {
-  background-color: #ebfafa;
+  background-image: linear-gradient(to bottom right, #B9316B, #793071, #342F78);
+  background-color: #793071;
 }
 html {
   scroll-behavior: smooth;
