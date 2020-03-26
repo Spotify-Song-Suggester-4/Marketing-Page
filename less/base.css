@@ -1,9 +1,23 @@
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sarabun Regular'), local('Sarabun-Regular'), url(https://fonts.gstatic.com/s/sarabun/v7/DtVjJx26TKEr37c9aBVJmg.ttf) format('truetype');
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
 .center {
   margin: auto;
 }
 body {
-  background-image: linear-gradient(to bottom right, #B9316B, #793071, #342F78);
-  background-color: #793071;
+  background: url(../images/bg.svg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #1F2026;
+  font-family: 'Sarabun', sans-serif;
 }
 html {
   scroll-behavior: smooth;

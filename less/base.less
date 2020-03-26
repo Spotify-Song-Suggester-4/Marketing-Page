@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
 // Mixins
 .flexrow() {display: flex;
     flex-direction: row;}
@@ -23,15 +25,24 @@
 @mainbg01:  #B9316B;  
 @mainbg02: #793071;
 @mainbg03: #342F78;
-@altmainbg: #793071;
+@mainbg: #1F2026;
 @navbg: #AA499C;
 @font: #ffffff;
 @lines: #c8c000;
 @border: 3px double @lines;
 
 
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+ }
+
 // Basics
 .center {margin: auto;}
-body {background-image: linear-gradient(to bottom right, @mainbg01, @mainbg02, @mainbg03);
-    background-color: @altmainbg;}
+body {background: url(../images/bg.svg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: @mainbg;
+    font-family: 'Sarabun', sans-serif;}
 html {scroll-behavior: smooth;}

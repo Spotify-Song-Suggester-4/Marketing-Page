@@ -1,13 +1,13 @@
 @import '../less/reset.less';
 @import '../less/base.less';
 
+
 // Navigation
 nav {overflow: hidden;
-    background-color: @navbg;
     position: relative;
-    border-bottom: @border;
 
     .mobile {.flexcolumn();
+        background-color: @navbg;
 
         #myLinks {display: none;}
 
@@ -35,7 +35,6 @@ nav {overflow: hidden;
 
 // Main
 .main {position: relative;
-    height: 600px;
 
     header {.flexcolumn();
         padding: .6em 0 1em 0;
@@ -45,13 +44,13 @@ nav {overflow: hidden;
         h2 {.text(center, 1.2em, @font);}
     }
 
-    .content {height: 300px;}
+    .content {.text(center, 1em, @font);}
 
     footer {.flexcolumn();
-        border-top: @border;
         padding-top: .6em;
     
-        p {.text(center, 1em, @font);}
+        p {.text(center, 1em, @font);
+            padding: 1em;}
     }
 }
 

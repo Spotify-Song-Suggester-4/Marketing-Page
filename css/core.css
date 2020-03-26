@@ -126,27 +126,40 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sarabun Regular'), local('Sarabun-Regular'), url(https://fonts.gstatic.com/s/sarabun/v7/DtVjJx26TKEr37c9aBVJmg.ttf) format('truetype');
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
 .center {
   margin: auto;
 }
 body {
-  background-image: linear-gradient(to bottom right, #B9316B, #793071, #342F78);
-  background-color: #793071;
+  background: url(../images/bg.svg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #1F2026;
+  font-family: 'Sarabun', sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
 nav {
   overflow: hidden;
-  background-color: #AA499C;
   position: relative;
-  border-bottom: 3px double #c8c000;
 }
 nav .mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #AA499C;
 }
 nav .mobile #myLinks {
   display: none;
@@ -174,7 +187,6 @@ nav .desktop {
 }
 .main {
   position: relative;
-  height: 600px;
 }
 .main header {
   display: flex;
@@ -194,20 +206,22 @@ nav .desktop {
   color: #ffffff;
 }
 .main .content {
-  height: 300px;
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
 }
 .main footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 3px double #c8c000;
   padding-top: 0.6em;
 }
 .main footer p {
   text-align: center;
   font-size: 1em;
   color: #ffffff;
+  padding: 1em;
 }
 @media only screen and (min-width: 730px) {
   nav {
@@ -221,28 +235,34 @@ nav .desktop {
   nav .desktop {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
-  nav .desktop a {
+  nav .desktop .title {
+    padding: 1em 25em 1em 2em;
     color: #ffffff;
-    padding: 1em;
+  }
+  nav .desktop .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav .desktop .links a {
+    color: #ffffff;
+    padding: 1em 2.5em;
     text-decoration: none;
     font-size: 17px;
     display: block;
   }
-  nav .desktop a:hover {
+  nav .desktop .links a:hover {
     background-color: #ffffff;
     color: #AA499C;
   }
   .main {
     top: 60px;
-    height: 1000px;
   }
   .main header h1 {
     font-size: 2em;
-  }
-  .main .content {
-    height: 500px;
   }
 }
