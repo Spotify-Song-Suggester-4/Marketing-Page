@@ -2,13 +2,55 @@
 @import '../less/base.less';
 
 // Navigation
+nav {overflow: hidden;
+    background-color: @navbg;
+    position: relative;
+    border-bottom: @border;
 
+    .mobile {.flexcolumn();
 
+        #myLinks {display: none;}
+
+        a {color: @font;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        
+            .icon {background: @navbg;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;}
+
+            &:hover {background-color: @font;
+                color: @navbg;}
+        }
+    }
+
+    .desktop {display: none;}
+}
 
 
 
 // Main
+.main {position: relative;
 
+    header {.flexcolumn();
+        padding: .6em 0 1em 0;
+    
+        h1 {.text(center, 1.5em, @font);}
+
+        h2 {.text(center, 1.2em, @font);}
+    }
+
+    footer {.flexcolumn();
+        border-top: @border;
+        padding-top: .6em;
+    
+        p {.text(center, 1em, @font);}
+    }
+}
 
 
 // Media import

@@ -130,8 +130,115 @@ table {
   margin: auto;
 }
 body {
-  background-color: #ebfafa;
+  background-image: linear-gradient(to bottom right, #B9316B, #793071, #342F78);
+  background-color: #793071;
 }
 html {
   scroll-behavior: smooth;
+}
+nav {
+  overflow: hidden;
+  background-color: #AA499C;
+  position: relative;
+  border-bottom: 3px double #c8c000;
+}
+nav .mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+nav .mobile #myLinks {
+  display: none;
+}
+nav .mobile a {
+  color: #ffffff;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+nav .mobile a .icon {
+  background: #AA499C;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+nav .mobile a:hover {
+  background-color: #ffffff;
+  color: #AA499C;
+}
+nav .desktop {
+  display: none;
+}
+.main {
+  position: relative;
+}
+.main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6em 0 1em 0;
+}
+.main header h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+.main header h2 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.main footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px double #c8c000;
+  padding-top: 0.6em;
+}
+.main footer p {
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
+}
+@media only screen and (min-width: 730px) {
+  nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+  }
+  nav .mobile {
+    display: none;
+  }
+  nav .desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav .desktop a {
+    color: #ffffff;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  nav .desktop a:hover {
+    background-color: #ffffff;
+    color: #AA499C;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .main header h1 {
+    font-size: 2em;
+  }
 }

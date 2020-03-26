@@ -15,21 +15,23 @@
 
 
 // Variables
-@1175: ~"only screen and (max-width: 1175px)";
-@930: ~"only screen and (max-width: 930px)";
-@730: ~"only screen and (max-width: 730px)";
-@530: ~"only screen and (max-width: 530px)";
-@400: ~"only screen and (max-width: 400px)";
-@mainbg: #ebfafa;
-@mainfont: #0a2929;
-@navbg: #33cccc;
-@navfont: #145252;
-@altfont: #1f7a7a;
-@links: #ffffff;
-@border: 3px double @altfont;
+@1175: ~"only screen and (min-width: 1175px)";
+@930: ~"only screen and (min-width: 930px)";
+@730: ~"only screen and (min-width: 730px)";
+@530: ~"only screen and (min-width: 530px)";
+@400: ~"only screen and (min-width: 400px)";
+@mainbg01:  #B9316B;  
+@mainbg02: #793071;
+@mainbg03: #342F78;
+@altmainbg: #793071;
+@navbg: #AA499C;
+@font: #ffffff;
+@lines: #c8c000;
+@border: 3px double @lines;
 
 
 // Basics
 .center {margin: auto;}
-body {background-color: @mainbg;}
+body {background-image: linear-gradient(to bottom right, @mainbg01, @mainbg02, @mainbg03);
+    background-color: @altmainbg;}
 html {scroll-behavior: smooth;}
