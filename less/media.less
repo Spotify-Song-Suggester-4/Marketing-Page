@@ -8,18 +8,26 @@
         .mobile {display: none;}
 
         .desktop {.flexrow();
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
         
-            a {color: @font;
-                padding: 1em;
-                text-decoration: none;
-                font-size: 17px;
-                display: block;
+            .title {padding: 1em 25em 1em 2em;
+                color: @font;}
+
+            .links {.flexrow();
+                justify-content: flex-end;
+                align-items: center;
             
-                &:hover {background-color: @font;
-                    color: @navbg;}
-            }
+                a {color: @font;
+                    padding: 1em 2.5em;
+                    text-decoration: none;
+                    font-size: 17px;
+                    display: block;
+                
+                    &:hover {background-color: @font;
+                        color: @navbg;}
+                }
+            } 
         }
     }
 
@@ -30,6 +38,5 @@
             h1 {font-size: 2em;}
         }
 
-        .content {height: 500px;}
     }
 }

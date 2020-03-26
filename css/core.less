@@ -1,10 +1,10 @@
 @import '../less/reset.less';
 @import '../less/base.less';
 
+
 // Navigation
 nav {overflow: hidden;
     position: relative;
-    border-bottom: @border;
 
     .mobile {.flexcolumn();
         background-color: @navbg;
@@ -44,10 +44,9 @@ nav {overflow: hidden;
         h2 {.text(center, 1.2em, @font);}
     }
 
-    .content {height: 300px;}
+    .content {.text(center, 1em, @font);}
 
     footer {.flexcolumn();
-        border-top: @border;
         padding-top: .6em;
     
         p {.text(center, 1em, @font);
