@@ -130,7 +130,7 @@ table {
   margin: auto;
 }
 body {
-  background-image: linear-gradient(to bottom right, #B9316B, #793071, #342F78);
+  background-image: linear-gradient(to bottom, #B9316B, #793071, #342F78);
   background-color: #793071;
 }
 html {
@@ -138,7 +138,6 @@ html {
 }
 nav {
   overflow: hidden;
-  background-color: #AA499C;
   position: relative;
   border-bottom: 3px double #c8c000;
 }
@@ -147,6 +146,7 @@ nav .mobile {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #AA499C;
 }
 nav .mobile #myLinks {
   display: none;
@@ -174,7 +174,6 @@ nav .desktop {
 }
 .main {
   position: relative;
-  height: 600px;
 }
 .main header {
   display: flex;
@@ -208,6 +207,7 @@ nav .desktop {
   text-align: center;
   font-size: 1em;
   color: #ffffff;
+  padding: 1em;
 }
 @media only screen and (min-width: 730px) {
   nav {
@@ -237,7 +237,6 @@ nav .desktop {
   }
   .main {
     top: 60px;
-    height: 1000px;
   }
   .main header h1 {
     font-size: 2em;
