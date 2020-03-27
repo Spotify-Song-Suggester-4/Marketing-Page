@@ -48,7 +48,8 @@ nav {overflow: hidden;
             padding: 1em;}
     }
 
-    .content {.text(center, 1em, @font);
+    .content {.flexcolumn();
+        .text(center, 1em, @font);
 
         p {.text(center, 1.2em, @font);
             padding: 1em;}
@@ -73,7 +74,8 @@ nav {overflow: hidden;
             }
 
             img {width: 14em;
-                border-radius: 20%;}
+                border-radius: 20%;
+                padding: 1em;}
         }
     }
 

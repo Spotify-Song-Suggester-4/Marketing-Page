@@ -15,11 +15,22 @@
 body {
   background: url(../images/bg.svg) no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-color: #1F2026;
   font-family: 'Sarabun', sans-serif;
 }
 html {
   scroll-behavior: smooth;
+}
+@media only screen and (min-width: 400px) {
+  .main .content .team-member img {
+    width: 16em;
+  }
+}
+@media only screen and (min-width: 530px) {
+  .main .content .team-member img {
+    width: 18em;
+  }
 }
 @media only screen and (min-width: 730px) {
   nav {
@@ -37,7 +48,8 @@ html {
     align-items: center;
   }
   nav .desktop .title {
-    padding: 1em 25em 1em 2em;
+    padding: 1em 10em 1em 1em;
+    font-size: 1.5em;
     color: #ffffff;
   }
   nav .desktop .links {
@@ -48,9 +60,9 @@ html {
   }
   nav .desktop .links a {
     color: #ffffff;
-    padding: 1em 2.5em;
+    padding: 1em;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1em;
     display: block;
   }
   nav .desktop .links a:hover {
@@ -61,6 +73,21 @@ html {
     top: 60px;
   }
   .main header h1 {
-    font-size: 2em;
+    font-size: 2.8em;
+  }
+  .main header h2 {
+    align-self: flex-start;
+    padding: 1em;
+  }
+  .main .content p {
+    align-self: flex-start;
+  }
+  .main .content .team-member {
+    display: flex;
+    flex-direction: row;
+  }
+  .main .content .alt {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }

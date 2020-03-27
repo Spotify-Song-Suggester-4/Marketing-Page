@@ -1,5 +1,31 @@
 @import 'base.less';
 
+@media @400 {
+    .main {
+
+        .content {
+
+            .team-member {
+
+                img {width: 16em;}
+            }
+        }
+    }
+}
+
+@media @530 {
+    .main {
+
+        .content {
+
+            .team-member {
+
+                img {width: 18em;}
+            }
+        }
+    }
+}
+
 @media @730 {
     nav {position: fixed;
         z-index: 5;
@@ -11,7 +37,8 @@
             justify-content: center;
             align-items: center;
         
-            .title {padding: 1em 25em 1em 2em;
+            .title {padding: 1em 10em 1em 1em;
+                font-size: 1.5em;
                 color: @font;}
 
             .links {.flexrow();
@@ -19,9 +46,9 @@
                 align-items: center;
             
                 a {color: @font;
-                    padding: 1em 2.5em;
+                    padding: 1em;
                     text-decoration: none;
-                    font-size: 17px;
+                    font-size: 1em;
                     display: block;
                 
                     &:hover {background-color: @font;
@@ -35,7 +62,19 @@
     
         header {
 
-            h1 {font-size: 2em;}
+            h1 {font-size: 2.8em;}
+
+            h2 {align-self: flex-start;
+                padding: 1em;}
+        }
+
+        .content {
+
+            p {align-self: flex-start;}
+        
+            .team-member {.flexrow();}
+
+            .alt {.altflexrow();}
         }
 
     }
