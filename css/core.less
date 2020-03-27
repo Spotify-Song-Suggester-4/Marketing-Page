@@ -4,7 +4,9 @@
 
 // Navigation
 nav {overflow: hidden;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
 
     .mobile {.flexcolumn();
         background-color: @navbg;
@@ -35,16 +37,45 @@ nav {overflow: hidden;
 
 // Main
 .main {position: relative;
+    top: 50px;
 
     header {.flexcolumn();
         padding: .6em 0 1em 0;
     
-        h1 {.text(center, 1.5em, @font);}
+        h1 {.text(center, 2.5em, @font);}
 
-        h2 {.text(center, 1.2em, @font);}
+        h2 {.text(center, 1.5em, @font);
+            padding: 1em;}
     }
 
-    .content {.text(center, 1em, @font);}
+    .content {.text(center, 1em, @font);
+
+        p {.text(center, 1.2em, @font);
+            padding: 1em;}
+
+        button {background-color: @lines;
+            .text(center, 1.2em, @mainbg03);
+            padding: .5em;}
+    
+        .team-member {.flexcolumn();
+        
+            .member-info {.flexcolumn();
+                line-height: 1.5;
+
+                h1 {font-size: 2em;}
+
+                h2 {font-size: 1.5em;}
+
+                a {color: @font;
+                    text-decoration: none;
+                    font-size: 17px;
+                    display: block;}
+            }
+
+            img {width: 14em;
+                border-radius: 20%;}
+        }
+    }
 
     footer {.flexcolumn();
         padding-top: .6em;
