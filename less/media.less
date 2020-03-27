@@ -38,7 +38,7 @@
             align-items: center;
         
             .title {padding: 1em 10em 1em 1em;
-                font-size: 1.5em;
+                font-size: 1.9em;
                 color: @font;}
 
             .links {.flexrow();
@@ -48,7 +48,7 @@
                 a {color: @font;
                     padding: 1em;
                     text-decoration: none;
-                    font-size: 1em;
+                    font-size: 1.2em;
                     display: block;
                 
                     &:hover {background-color: @font;
@@ -58,7 +58,7 @@
         }
     }
 
-    .main  {top: 60px;
+    .main  {top: 80px;
     
         header {
 
@@ -71,11 +71,68 @@
         .content {
 
             p {align-self: flex-start;}
+
+            button {align-self: flex-start;
+                margin-left: 6em;}
         
-            .team-member {.flexrow();}
+            .team-member {.flexrow();
+                img {margin: 1em 2em;
+                    width: 20em;}
+            }
 
             .alt {.altflexrow();}
         }
 
+    }
+}
+
+@media @930 {
+    nav {
+        .desktop {
+            .title {padding: 1em 12em 1em 1em;}
+        }
+    }
+    .main {
+        header {
+            h2 {margin-left: 2em;}
+        }
+
+        .content {
+            p {margin-left: 2.5em;}
+
+            button {margin-left: 8em;}
+
+            .team-member {
+                img {margin: 1em 4em;}
+            }
+        }
+    }
+}
+
+@media @1175 {
+    nav {
+        .desktop {
+            .title {font-size: 2.3em;}
+
+            .links {
+                a {font-size: 1.5em;}
+            }
+        }
+    }
+
+    .main {top: 100px;
+        header {
+            h1 {font-size: 3.4em;}
+            h2 {font-size: 2.4em;}
+        }
+        .content {
+            p {font-size: 1.5em;}
+            button {margin-left: 12em;
+                margin-top: 1em;}
+
+            .team-member {
+                img {margin: 1em 20em;}
+            }
+        }
     }
 }
