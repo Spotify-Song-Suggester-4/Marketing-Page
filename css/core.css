@@ -152,7 +152,9 @@ html {
 }
 nav {
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 nav .mobile {
   display: flex;
@@ -187,6 +189,7 @@ nav .desktop {
 }
 .main {
   position: relative;
+  top: 50px;
 }
 .main header {
   display: flex;
@@ -197,18 +200,66 @@ nav .desktop {
 }
 .main header h1 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #ffffff;
 }
 .main header h2 {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #ffffff;
+  padding: 1em;
 }
 .main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 1em;
   color: #ffffff;
+}
+.main .content p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #ffffff;
+  padding: 1em;
+}
+.main .content button {
+  background-color: #c8c000;
+  text-align: center;
+  font-size: 1.2em;
+  color: #342F78;
+  padding: 0.5em;
+}
+.main .content .team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .content .team-member .member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+}
+.main .content .team-member .member-info h1 {
+  font-size: 2em;
+}
+.main .content .team-member .member-info h2 {
+  font-size: 1.5em;
+}
+.main .content .team-member .member-info a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.main .content .team-member img {
+  width: 14em;
+  border-radius: 20%;
+  padding: 1em;
 }
 .main footer {
   display: flex;
@@ -222,6 +273,16 @@ nav .desktop {
   font-size: 1em;
   color: #ffffff;
   padding: 1em;
+}
+@media only screen and (min-width: 400px) {
+  .main .content .team-member img {
+    width: 16em;
+  }
+}
+@media only screen and (min-width: 530px) {
+  .main .content .team-member img {
+    width: 18em;
+  }
 }
 @media only screen and (min-width: 730px) {
   nav {
@@ -239,7 +300,8 @@ nav .desktop {
     align-items: center;
   }
   nav .desktop .title {
-    padding: 1em 25em 1em 2em;
+    padding: 1em 10em 1em 1em;
+    font-size: 1.5em;
     color: #ffffff;
   }
   nav .desktop .links {
@@ -250,9 +312,9 @@ nav .desktop {
   }
   nav .desktop .links a {
     color: #ffffff;
-    padding: 1em 2.5em;
+    padding: 1em;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1em;
     display: block;
   }
   nav .desktop .links a:hover {
@@ -263,6 +325,21 @@ nav .desktop {
     top: 60px;
   }
   .main header h1 {
-    font-size: 2em;
+    font-size: 2.8em;
+  }
+  .main header h2 {
+    align-self: flex-start;
+    padding: 1em;
+  }
+  .main .content p {
+    align-self: flex-start;
+  }
+  .main .content .team-member {
+    display: flex;
+    flex-direction: row;
+  }
+  .main .content .alt {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
